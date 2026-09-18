@@ -7,3 +7,5 @@ Feature branch change
 Add second change
 Master branch change
 New feature for DevOps
+GitHub origin test
+Change made directly on GitHub
