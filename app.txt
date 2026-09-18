@@ -4,3 +4,4 @@ Third line
 Docker is part of DevOps
 Temporary change
 Feature branch change
+Master branch change
