@@ -7,3 +7,4 @@ Feature branch change
 Add second change
 Master branch change
 GitHub origin test
+Change made directly on GitHub
