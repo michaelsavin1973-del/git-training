@@ -16,3 +16,4 @@ Change made locally for second FETCH test
 Change made on GitHub for second FETCH test
 Change made on master before rebase
 New master change
+Change from rebase-test
