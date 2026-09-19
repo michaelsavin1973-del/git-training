@@ -15,3 +15,4 @@ Change created on GitHub for FETCH exercise
 Change made locally for second FETCH test
 Change made on GitHub for second FETCH test
 Change made on master before rebase
+New master change
