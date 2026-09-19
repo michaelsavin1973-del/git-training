@@ -10,3 +10,4 @@ New feature for DevOps
 GitHub origin test
 Change made directly on GitHub
 Change made for FETCH test
+Change created on GitHub for FETCH exercise
