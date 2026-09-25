@@ -6,3 +6,4 @@ jobs:
     steps:
       - run: echo "Hello, Michael"
       - run: echo "This is step two"
+      - run: echo "Workflow finished"
