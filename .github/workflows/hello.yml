@@ -7,3 +7,4 @@ jobs:
       - run: echo "Hello, Michael"
       - run: echo "This is step two"
       - run: echo "Workflow finished"
+      - run: uname -a
