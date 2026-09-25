@@ -8,4 +8,3 @@ jobs:
       - run: echo "This is step two"
       - run: echo "Workflow finished"
       - run: uname -a
-      - run: false
