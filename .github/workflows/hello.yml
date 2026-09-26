@@ -12,3 +12,8 @@ jobs:
       - run: echo "This is step two"
       - run: echo "Workflow finished"
       - run: uname -a
+  check-file:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: test -f app.txt
