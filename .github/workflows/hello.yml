@@ -1,5 +1,8 @@
 name: Hello
-on: [push, pull_request]
+on:
+  push:
+    branches: [master]
+  pull_request:
 jobs:
   say-hello:
     runs-on: ubuntu-latest
