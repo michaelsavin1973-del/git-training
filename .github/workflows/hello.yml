@@ -13,6 +13,7 @@ jobs:
       - run: echo "Workflow finished"
       - run: uname -a
   check-file:
+    needs: say-hello
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
