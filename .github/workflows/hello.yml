@@ -15,9 +15,18 @@ jobs:
       - run: echo "This is step two"
       - run: echo "Workflow finished"
       - run: uname -a
+      - run: echo "Built by say-hello" > result.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build-result
+          path: result.txt
   check-file:
     needs: say-hello
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: build-result
       - run: test -f app.txt
+      - run: grep -Fx "Built by say-hello" result.txt
