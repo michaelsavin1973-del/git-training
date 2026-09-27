@@ -31,3 +31,8 @@ jobs:
       - run: cat result.txt
       - run: test -f app.txt
       - run: grep -Fx "Built by say-hello" result.txt
+  verify-dockerfile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: test -f Dockerfile
