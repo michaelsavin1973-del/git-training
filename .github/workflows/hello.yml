@@ -1,4 +1,6 @@
 name: Hello
+env:
+  MESSAGE: Hello from CI
 on:
   push:
     branches: [master]
@@ -16,6 +18,7 @@ jobs:
       - run: echo "Workflow finished"
       - run: uname -a
       - run: echo "Built by say-hello" > result.txt
+      - run: echo "$MESSAGE"
       - uses: actions/upload-artifact@v4
         with:
           name: build-result
