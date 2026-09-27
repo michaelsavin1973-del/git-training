@@ -28,5 +28,6 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: build-result
+      - run: cat result.txt
       - run: test -f app.txt
       - run: grep -Fx "Built by say-hello" result.txt
