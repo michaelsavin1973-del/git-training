@@ -19,6 +19,9 @@ jobs:
       - run: uname -a
       - run: echo "Built by say-hello" > result.txt
       - run: echo "$MESSAGE"
+      - run: echo "$MESSAGE"
+        env:
+          MESSAGE: Hello from one step
       - uses: actions/upload-artifact@v4
         with:
           name: build-result
