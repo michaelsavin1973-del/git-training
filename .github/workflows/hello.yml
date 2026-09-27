@@ -26,6 +26,8 @@ jobs:
   check-file:
     needs: [say-hello, verify-dockerfile]
     runs-on: ubuntu-latest
+    env:
+      MESSAGE: Hello from check-file
     steps:
       - uses: actions/checkout@v4
       - run: echo "$MESSAGE"
