@@ -2,6 +2,7 @@ name: Hello
 env:
   MESSAGE: Hello from CI
 on:
+  workflow_dispatch:
   push:
     branches: [master]
   pull_request:
