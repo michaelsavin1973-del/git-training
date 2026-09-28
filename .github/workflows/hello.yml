@@ -3,6 +3,12 @@ env:
   MESSAGE: Hello from CI
 on:
   workflow_dispatch:
+    inputs:
+      name:
+        description: "Who to greet"
+        required: true
+        default: "Michael"
+        type: string
   push:
     branches: [master]
   pull_request:
@@ -14,7 +20,9 @@ jobs:
       - run: test -f app.txt
       - run: docker build -t git-training-demo .
       - run: docker run --rm git-training-demo | grep -F "Hello DevOps"
-      - run: echo "Hello, Michael"
+      - run: echo "Hello, $NAME"
+        env:
+          NAME: ${{ inputs.name || 'Michael' }}
       - run: echo "This is step two"
       - run: echo "Workflow finished"
       - run: uname -a
