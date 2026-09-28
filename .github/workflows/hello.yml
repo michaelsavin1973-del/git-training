@@ -23,6 +23,8 @@ jobs:
       - run: echo "Hello, $NAME"
         env:
           NAME: ${{ inputs.name || 'Michael' }}
+      - run: echo "Started manually"
+        if: github.event_name == 'workflow_dispatch'
       - run: echo "This is step two"
       - run: echo "Workflow finished"
       - run: uname -a
